@@ -1,17 +1,19 @@
+var Role;
+(function (Role) {
+    Role[Role["ADMIN"] = 5] = "ADMIN";
+    Role[Role["READ_ONLY_USER"] = 6] = "READ_ONLY_USER";
+    Role[Role["ANNOYMOUS"] = 7] = "ANNOYMOUS";
+})(Role || (Role = {}));
 var person = {
     name: "Sid Zhang",
     age: 20,
     hobbies: ['Sports', 'Cooking'],
-    role: [2, 'author']
+    role: Role.ADMIN
 };
-person.role.push('admin');
+console.log(person.role);
 person.role[1] = 'kkk';
 console.log(person.name);
-for (var _i = 0, _a = person.role; _i < _a.length; _i++) {
-    var role = _a[_i];
-    console.log(role);
-}
-for (var _b = 0, _c = person.hobbies; _b < _c.length; _b++) {
-    var hobby = _c[_b];
+for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
     console.log(hobby);
 }
