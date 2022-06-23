@@ -1,13 +1,22 @@
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
-  if (showResult) {
-    console.log(phrase + n1 + n2);
-  } else {
-    return n1 + n2;
-  }
+const person : {
+    name: string
+    age: number
+    hobbies: string[]
+    role: [number, string]
+}= {
+  name: "Sid Zhang",
+  age: 20,
+  hobbies: ['Sports', 'Cooking'],
+  role: [2, 'author']
+};
+person.role.push('admin');
+person.role[1] = 'kkk'
+console.log(person.name);
+
+for (const role of person.role) {
+    console.log(role)
 }
 
-const number1 = 5;
-const number2 = 2.8;
-
-const result = add(number1, number2, true, "result is");
-console.log(result);
+for (const hobby of person.hobbies) {
+    console.log(hobby)
+}
